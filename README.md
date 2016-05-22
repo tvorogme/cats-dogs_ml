@@ -4,4 +4,4 @@ Made via [lasagne](https://lasagne.readthedocs.io/en/latest/user/installation.ht
 
 File | How? | Score
 ------------ | ------------- | -------------
-[cats_dogs_preproc.py](https://github.com/xenx/cats-dogs_ml/blob/master/cats_dogs_preproc.py) | RGB Images + 60x60 | 75%
+[normal_system.ipynb](https://github.com/xenx/cats-dogs_ml/blob/master/normal_system.ipynb) | RGB Images + 60x60 | 75%

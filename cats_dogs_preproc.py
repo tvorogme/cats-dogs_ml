@@ -99,7 +99,7 @@ def load_data(IMG_GEN_IMG, IMG_HEIGHT=60, IMG_WIDTH=60, IMG_GRAY=True):
         y = np.load("catdog_y.npy")
         return X,y
     
-def prepar_data(train_size,val_size,test_size):
+def prepar_data(X, y, train_size,val_size,test_size):
     X_train, y_train = X[:train_size], y[:train_size]
     X_val, y_val = X[train_size: train_size+val_size], y[train_size:train_size+val_size]
     X_test, y_test = X[train_size+val_size:], y[train_size+val_size:]

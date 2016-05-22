@@ -1,2 +1,3 @@
-# cats-dogs_ml
-Machine learning on cats and dogs classfication
+# ML for classification cats and dogs
+
+Made via [lasagne](https://lasagne.readthedocs.io/en/latest/user/installation.html)

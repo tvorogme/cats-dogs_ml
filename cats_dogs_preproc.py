@@ -99,16 +99,20 @@ def load_data(IMG_GEN_IMG, IMG_HEIGHT=60, IMG_WIDTH=60, IMG_GRAY=True):
         y = np.load("catdog_y.npy")
         return X,y
     
-def prepar_data(X, y, train_size,val_size,test_size):
+def prepar_data(X, y, train_size, val_size, test_size):
     X_train, y_train = X[:train_size], y[:train_size]
     X_val, y_val = X[train_size: train_size+val_size], y[train_size:train_size+val_size]
     X_test, y_test = X[train_size+val_size:], y[train_size+val_size:]
     return X_train, y_train, X_val, y_val, X_test, y_test
 
-def iterate_minibatches(inputs, targets, batchsize):
+def iterate_minibatches(inputs, targets, batchsize, inputs_new=None):
     assert len(inputs) == len(targets)
+    assert len(inputs_new) == len(inputs_new)
     indices = np.arange(len(inputs))
     np.random.shuffle(indices)
     for start_idx in range(0, len(inputs) - batchsize + 1, batchsize):
         excerpt = indices[start_idx:start_idx + batchsize]
-        yield inputs[excerpt], targets[excerpt]
+        if inputs_new != None:
+            yield inputs[excerpt], inputs_new[excerpt], targets[excerpt]
+        else:
+            yield inputs[excerpt], targets[excerpt]

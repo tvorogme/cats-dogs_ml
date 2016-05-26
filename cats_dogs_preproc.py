@@ -107,7 +107,8 @@ def prepar_data(X, y, train_size, val_size, test_size):
 
 def iterate_minibatches(inputs, targets, batchsize, inputs_new=None):
     assert len(inputs) == len(targets)
-    assert len(inputs_new) == len(inputs_new)
+    if inputs_new != None:
+        assert len(inputs_new) == len(inputs_new)
     indices = np.arange(len(inputs))
     np.random.shuffle(indices)
     for start_idx in range(0, len(inputs) - batchsize + 1, batchsize):

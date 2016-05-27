@@ -5,4 +5,4 @@ Made via [lasagne](https://lasagne.readthedocs.io/en/latest/user/installation.ht
 File | How? | Score
 ------------ | ------------- | -------------
 [baseline_rgb.ipynb](https://github.com/xenx/cats-dogs_ml/blob/master/baseline_rgb.ipynb) | RGB Images + 60x60 | 75.40%
-[two_inputs.ipynb](https://everware.rep.school.yandex.net/user/xenx/notebooks/cats-dogs_ml/baseline_rgb.ipynb) | Two input layers | 75.28 %
+[two_inputs.ipynb](https://everware.rep.school.yandex.net/user/xenx/notebooks/cats-dogs_ml/baseline_rgb.ipynb) | Two input layers | 77.6%
